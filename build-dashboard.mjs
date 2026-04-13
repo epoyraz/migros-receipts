@@ -133,7 +133,7 @@ const html = `<!DOCTYPE html>
 <h2 class="section-title">Übersicht</h2>
 <div class="grid" id="grid"></div>
 
-<h2 class="section-title">Aktienkurse <span class="section-sub">— Preisverlauf einzelner Produkte</span></h2>
+<h2 class="section-title" id="aktienkurse">Aktienkurse <span class="section-sub">— Preisverlauf einzelner Produkte</span></h2>
 <div class="grid" id="gridPrices"></div>
 
 <script>
