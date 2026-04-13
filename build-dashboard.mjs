@@ -495,6 +495,15 @@ new Chart(document.getElementById("chartCategory"), {
 PRICE_ITEMS.forEach((it, i) => {
   makePriceChart(\`chartPrice\${i}\`, it.name, it.up ? "#ff4444" : "#4ecdc4", it.up);
 });
+
+// Re-apply hash-anchor scroll after dynamic content has been inserted,
+// otherwise the initial browser scroll lands above the now-pushed-down target.
+if (location.hash) {
+  requestAnimationFrame(() => {
+    const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (el) el.scrollIntoView({ behavior: "instant", block: "start" });
+  });
+}
 </script>
 </body>
 </html>`;
