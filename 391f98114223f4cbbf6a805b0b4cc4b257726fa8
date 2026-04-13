@@ -1,0 +1,25 @@
+build-dashboard.mjs
+  0dba292c019096ad 498-506
+dashboard.html
+  0dba292c019096ad 409-417
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "391f98114223f4cbbf6a805b0b4cc4b257726fa8",
+  "prompts": {
+    "0dba292c019096ad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9a6b4bed-bff1-41ab-8d25-2843a2f746b5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Enes Poyraz",
+      "messages": [],
+      "total_additions": 18,
+      "total_deletions": 0,
+      "accepted_lines": 222,
+      "overriden_lines": 0
+    }
+  }
+}
