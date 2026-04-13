@@ -3,12 +3,6 @@
 csv_json.txt
 receipts/
 
-# Build/scrape scripts that depend on raw data
-build-dashboard.mjs
-download.mjs
-find-price-changes.mjs
-
 # Node
 node_modules/
-package.json
 package-lock.json

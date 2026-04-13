@@ -135,19 +135,8 @@ addCard("Meistgenutzte Aktionen", "tableDiscounts", false);
 // --- 8. Spending by category (heuristic) ---
 addChart("Ausgaben nach Kategorie (geschätzt)", "chartCategory", false);
 
-// --- 9. Price history (stock-style) ---
-const PRICE_ITEMS = [
-  { name: "Alnatura Reiswaffel",     pct: "+32.5%", up: true  },
-  { name: "Alnatura Coco Drink",     pct: "+20.2%", up: true  },
-  { name: "Alnatura Reisw. Zartb.",  pct: "+13.3%", up: true  },
-  { name: "Alnatura Dinkel Waffel",  pct: "+9.1%",  up: true  },
-  { name: "Andros Granatapfelsaft",  pct: "+8.3%",  up: true  },
-  { name: "Bio Choco Drink 250ml",   pct: "-28.6%", up: false },
-  { name: "Capri-Sun Multivitamin",  pct: "-24.1%", up: false },
-  { name: "Eier Freiland",           pct: "-22.1%", up: false },
-  { name: "Caffè Latte Macchiato",   pct: "-6.3%",  up: false },
-  { name: "Bio Gurke",               pct: "-6.3%",  up: false },
-];
+// --- 9. Price history (stock-style) — auto-computed top movers ---
+const PRICE_ITEMS = [{"name":"Alnatura Reiswaffel","pct":"+32.5%","up":true},{"name":"Alnatura Coco Drink","pct":"+20.2%","up":true},{"name":"Alnatura Reisw. Zartb.","pct":"+13.3%","up":true},{"name":"Alnatura Dinkel Waffel","pct":"+9.1%","up":true},{"name":"Andros Granatapfelsaft","pct":"+8.3%","up":true},{"name":"Bio Choco Drink 250ml","pct":"-28.6%","up":false},{"name":"Capri-Sun Multivitamin","pct":"-24.1%","up":false},{"name":"Eier Freiland","pct":"-22.1%","up":false},{"name":"Croissant pur Beurre","pct":"-7.2%","up":false},{"name":"Caffè Latte Macchiato","pct":"-6.3%","up":false}];
 PRICE_ITEMS.forEach((it, i) => {
   addChart(`${it.name} (${it.pct})`, `chartPrice${i}`, false, gridPrices);
 });
